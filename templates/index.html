@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -6,6 +7,7 @@
   <title>weather</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,7 +38,8 @@
   <div class="row">
       
     {% if data.country_code %}
-    <div class="col-md-6 col-md-offset-3">
+    <center>
+      <div class="div1">
       <h1>{{city}}</h1>
       <h3>country code : {{data.country_code}}</h1>
         <h5>coordinate : {{data.coordinate}}</h5>
@@ -44,6 +47,7 @@
         <h5>pressure : {{data.pressure}} </h5>
         <h5>humidity : {{data.humidity}}</h5>
     </div>
+  </center>
     {% endif %}
   </div>
 </body>

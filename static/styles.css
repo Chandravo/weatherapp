@@ -1,34 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+html,
 body {
-    color: #fff;
-    overflow-x: hidden;
-    height: 100%;
-    background-color: #CFD8DC;
-    background-repeat: no-repeat
+    height: 100%
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+body {
+    background-color: #ffffff;
+    display: grid;
+    place-items: center
 }
 
 .card {
-    background-image: url("https://i.imgur.com/dpqZJV5.jpg");
+    border-radius: 15px;
+    color: #6f707d
+}
+
+.div1 {
+    background: url('https://i.imgur.com/sTfvzrM.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
-    width: 600px;
-    height: 350px;
-    border-radius: 20px;
-    box-shadow: 0px 8px 16px 4px #9E9E9E;
-    margin-top: 50px;
-    margin-bottom: 50px
+    background-attachment: local;
+    border-radius: 16px 16px 0 0
 }
 
-.time-font {
-    font-size: 50px
+.div2 {
+    height: 30px;
+    background-color: #9fe0fa;
+    border-radius: 0 0 15px 15px
 }
 
-.sm-font {
-    font-size: 18px
+h1 {
+    font-size: 65px
 }
 
-.med-font {
-    font-size: 28px
+sup {
+    font-size: 17px;
+    position: relative;
+    top: -2rem
 }
 
-.large-font {
-    font-size: 60px
+*:focus {
+    outline: none
 }

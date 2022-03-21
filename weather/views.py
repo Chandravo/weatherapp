@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render
 import json
 import urllib.request
@@ -12,8 +13,9 @@ def index(request):
         #    "country_code":str(json_data(['sys']))
         #}
         appid='2da7194f075903ecb881d9d150c3376e'
+        api_key=str(settings.API_KEY)
         URL = 'https://api.openweathermap.org/data/2.5/weather?'
-        param={'q':city,'appid':appid,'units':'metric'}
+        param={'q':city,'appid':api_key,'units':'metric'}
         r=requests.get(url=URL,params=param)
         res=r.json()
         data={
@@ -22,6 +24,9 @@ def index(request):
             'temp':str(res['main']['temp'])+' Celcius',
             'pressure': str(res['main']['pressure']),
             'humidity': str(res['main']['humidity']),
+            'description': str(res['weather'][0]['description']),
+            'wspeed': str(res['wind']['speed']),
+            
         }
         
     else:
