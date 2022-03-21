@@ -12,7 +12,7 @@ def index(request):
         #data={
         #    "country_code":str(json_data(['sys']))
         #}
-        appid='2da7194f075903ecb881d9d150c3376e'
+        
         api_key=str(settings.API_KEY)
         URL = 'https://api.openweathermap.org/data/2.5/weather?'
         param={'q':city,'appid':api_key,'units':'metric'}
