@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^u145x5+3%nn^(8%r4^i-ph1*u2g0xh=6#eo&)x6v%&g*gk#fh'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -127,4 +127,5 @@ STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-API_KEY=os.environ.get('API_KEY')
+OPEN_WEATHER_API_KEY=os.environ.get('OPEN_WEATHER_API_KEY')
+ACCUWEATHER_API_KEY=os.environ.get('ACCUWEATHER_API_KEY')

@@ -5,7 +5,8 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Weather</title>
-        <link rel="stylesheet" href="{%static 'css/styles13.css' %}" >
+        <link rel="icon" href="{%static 'images/w.png' %} ">
+        <link rel="stylesheet" href="{%static 'css/styles132.css' %}" >
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   
 
@@ -25,7 +26,7 @@
 		</style>
         <body>
             <nav class="row" style="background: grey; color: white;">
-                <div align="center"><h1 class="col-md-3 text-center">Weather Detector</h1></div>
+            <div align="center"><h1 class="col-md-3 text-center">Weather Detector</h1></div>
               </nav>
               <br />
               <br />
@@ -41,12 +42,13 @@
                     </div>
                 </form>
               </center>
+              <center>
               {% if data.country_code %}
                 <section class="askdetails">
                 <p class="file">{{city}}</p>
                 <hr>
                 <p class="mario"><b>Country : </b>{{data.country_code}} </p>
-                <p class="mario"><b>Temperature</b> : <span>{{data.temp}}</span> </p>
+                <p class="mario"><b>Temperature :</b>{{data.temp}}</p>
                 <p class="luigi"><b>Weather : </b>{{data.description}} </p>
                 <p class="wario"><b>Humidity : </b>{{data.humidity}} % </p>
                 <p class="wario"><b>Pressure : </b>{{data.pressure}} hPa</p>
@@ -55,6 +57,7 @@
 
 
              </section>
+             </center>
              {% endif %}
         </body>
 
