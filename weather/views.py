@@ -12,7 +12,8 @@ def index(request):
         #data={
         #    "country_code":str(json_data(['sys']))
         #}
-        
+        icon_url1 = "http://openweathermap.org/img/wn/"
+        icon_url2="@2x.png"
         api_key=str(settings.API_KEY)
         URL = 'https://api.openweathermap.org/data/2.5/weather?'
         param={'q':city,'appid':api_key,'units':'metric'}
@@ -26,6 +27,7 @@ def index(request):
             'humidity': str(res['main']['humidity']),
             'description': str(res['weather'][0]['description']),
             'wspeed': str(res['wind']['speed']),
+            'icon':icon_url1 + str(res['weather'][0]['icon'])+ icon_url2,
             
         }
         
@@ -33,4 +35,4 @@ def index(request):
         city=''
         data={}
     
-    return render(request,'index.html',{city:'city', 'data':data})
+    return render(request,'login.html',{city:'city', 'data':data})

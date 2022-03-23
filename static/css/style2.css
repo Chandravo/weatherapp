@@ -1,0 +1,46 @@
+html, body{
+    
+   background-size: cover;
+}
+
+
+
+.chckpts{
+    
+    position:absolute;
+    top:26%;
+    left:30%;
+    background-color:rgb(184, 225, 228) ;
+    opacity: 0.9;
+    padding: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 35px;
+}
+
+.mario{
+    background-color: rgb(198, 217, 233);
+    padding: 0%;
+    text-align: center;
+    border-radius: 20px;
+}
+.luigi{
+    background-color: rgb(198, 217, 233);
+    padding: 2%;
+    text-align: center;
+    border-radius: 20px;
+}
+.wario{
+    background-color: rgb(198, 217, 233);
+    padding: 2% ;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.chckpts .file{
+  text-align: center;
+   font-size: 20px;
+   
+
+}
+

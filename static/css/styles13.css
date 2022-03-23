@@ -1,0 +1,68 @@
+html, body{
+   
+    background-size: cover;
+}
+
+
+
+.askdetails{
+    
+    position:absolute;
+    top:26%;
+    left:35%;
+    background-color:rgb(201, 248, 252) ;
+    opacity: 0.9;
+    padding: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 35px;
+}
+
+.mario{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+    text-align: center;
+    border-radius: 20px;
+}
+.luigi{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+    text-align: center;
+    border-radius: 20px;
+}
+.wario{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2% ;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.askdetails .file{
+  text-align: center;
+   font-size: 20px;
+   
+
+}
+
+
+.askdetails .sub{
+    text-align: center;
+}
+
+.askdetails .email{
+    text-align: center;
+    font-size: 20px;
+   
+}
+
+.askdetails .user{
+ text-align: center;
+
+  
+ 
+}
+
+  
+  
+ 
+  
