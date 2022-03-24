@@ -7,6 +7,7 @@ import requests
 def index(request):
     if (request.method == "POST"):
         city=request.POST['city']
+        u_city=city
         
         #res=urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q'+city+'&appid=2da7194f075903ecb881d9d150c3376e').read()
         #j_data=json.load(res)
@@ -30,6 +31,7 @@ def index(request):
             'description': str(res['weather'][0]['description']),
             'wspeed': str(res['wind']['speed']),
             'icon':icon_url1 + str(res['weather'][0]['icon'])+ icon_url2,
+            'city': u_city.upper(),
             
         }
         
@@ -37,4 +39,4 @@ def index(request):
         city=''
         data={}
     
-    return render(request,'login.html',{city:'city', 'data':data})
+    return render(request,'login.html',{city:'city','data':data})
